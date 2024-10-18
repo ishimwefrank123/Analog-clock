@@ -21,6 +21,13 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: colorful 30s linear infinite;
+}
+
+@keyframes colorful{
+  100%{
+    filter: hue-rotate(360deg);
+  }
 }
 
 .bar-seconds,
@@ -116,9 +123,9 @@ body{
 .hands-box .minutes::before{
   content: '';
   position: absolute;
-  top: 48.5%;
-  left: 49%;
-  transform: translate(-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   width: 25px;
   height: 25px;
   background: #0ef;
@@ -143,14 +150,14 @@ body{
 .hands-box .seconds::before{
   content: '';
   position: absolute;
-  top: 48.5%;
-  left: 49%;
-  transform: translate(-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
   background: #fff;
   border-radius: 50%;
-  box-shadow: 0 0 2px ;rgba(0,0,0, .5);
+  box-shadow: 0 0 2px rgba(0,0,0, .5);
 }
 
 .hands-box .seconds i{

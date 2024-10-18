@@ -33,9 +33,13 @@ function getCurrentTime(){
   let currentMinutes = date.getMinutes();
   let currentSeconds = date.getSeconds();
 
+  handMinutes.style.transform = `rotate(${currentMinutes * 6}deg)`;
   handSeconds.style.transform = `rotate(${currentSeconds*6}deg)`;
-
+  handHours.style.transform = `rotate(${currentHours * 30 + currentMinutes / 2}deg)`;
 }
 
 //call getCurrentTime function on page load
 getCurrentTime();
+
+//call getCurrentTime to set clock hands every second
+setInterval(getCurrentTime, 1000); //1000 = 1s
