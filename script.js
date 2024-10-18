@@ -12,6 +12,11 @@ for(let i=1; i <= 12; i++){
   
 }
 numberHours.insertAdjacentHTML("afterbegin",numberElement.join(""));
-console.log(numberElement)
 
 // create bar seconds
+for(let i = 1; i<= 60; i++){
+  barElement.push(
+    `<span style="--index:${i};"><p></p></span>`
+  );
+}
+barSeconds.insertAdjacentHTML("afterbegin",barElement.join(""));
