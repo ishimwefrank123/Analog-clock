@@ -1,12 +1,13 @@
-const numberHours = document.querySelector('.index.html');
+const numberHours = document.querySelector('.number-hours');
 
 const numberElement = [];
 
 // create the number hours
 for(let i=1; i <= 12; i++){
   numberElement.push(
-    `<span><p>${i}</p></span>`
+    `<span style="--index:${i};"><p>${i}</p></span>`
   );
-  console.log(numberElement)
+  
 }
-
+numberHours.insertAdjacentHTML("afterbegin",numberElement.join(""));
+console.log(numberElement)
